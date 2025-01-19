@@ -33,3 +33,9 @@ fit=cv.glmnet(X,Yvec,alpha=1,nfolds = 5)
 
 x=fit$nzero[fit$index[1]]
 
+fit1 = glmnet(X,Yvec,alpha=1,nfolds = 5,lambda = fit$lambda.min) 
+id = which(fit1$beta==0)
+length(id)
+nonsig
+length(intersect(id,b0))
+fit1$beta
