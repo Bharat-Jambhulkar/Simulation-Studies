@@ -27,22 +27,25 @@ quantiles = quantile(dif, probs = c(0.025, 0.975))
 abline(v=c(quantiles[1],quantiles[2]))
 
 ## zero is not included in the interval 
-N=500
-contain_zrr = c()
+N=500 #sample size
+contain_zrr = c() 
 nsim = 100
-quantmat = matrix(nrow = nsim,ncol=2)
-for(i in 1:nsim){
-  p1 = rbeta(N,par11,par12)
-  p2 = rbeta(N,par21,par22)
-  dif = p1-p2
-  quantiles = quantile(dif, probs = c(0.025, 0.975))
-  quantmat[i,] = cbind(quantiles[1],quantiles[2])
+nsimulation = 1000
+for(j in 1:nsimulation){
+  quantmat = matrix(nrow = nsim,ncol=2)
+  for(i in 1:nsim){
+    p1 = rbeta(N,par11,par12)
+    p2 = rbeta(N,par21,par22)
+    dif = p1-p2
+    quantiles = quantile(dif, probs = c(0.025, 0.975))
+    quantmat[i,] = cbind(quantiles[1],quantiles[2])
+  }
   w=which(quantmat[,1]<0 & quantmat[,2]>0)
-  contain_zrr[i]=length(w)
+  contain_zrr[j]=length(w)
 }
 
-View(quantmat)
+table(contain_zrr)
 
-contain_zrr
+barplot(table(contain_zrr))
 
 
