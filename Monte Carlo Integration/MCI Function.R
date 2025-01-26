@@ -60,3 +60,25 @@ hist(nvec2)
 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 67954   68217   68286   68293   68368   68648 
 "
+
+
+## Function to solve integration usig Monte Carlo method
+
+MCI = function(lower_lim,upper_lim,user_fun){
+  if(class(user_fun)=="function" & class(lower_lim)=="numeric" & class(upper_lim)=="numeric"){
+  n = 5000000
+  set.seed(42)
+  x = runif(n,lower_lim,upper_lim)
+  fx = user_fun(x)
+  wx = (upper_lim - lower_lim)*fx
+  return(round(mean(wx),4))}else{
+   paste("Either user_fun class is not 'function', OR upper/lower limit is not numeric.")
+  }
+}
+
+f = function(x){
+  x^3
+}
+
+MCI(0,1,f)
+
