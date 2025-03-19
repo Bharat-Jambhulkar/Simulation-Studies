@@ -50,12 +50,12 @@ UL2=Xbar2+1.96*seboot2; round(UL2,4)
 plot(density(betahatmat[,1]),main="Intercept Parameter",lwd=2,col="lightblue",xlab="values")
 points(q1, c(0, 0), pch = 19, col = "red")
 points(c(LL1,UL1), c(0, 0), pch = 19, col = "darkblue")
-legend("topright",fill=c("red","darkblue"),legend=c("Quartile","Normal"))
+legend("topright",fill=c("red","darkblue"),legend=c("Quantile","Normal"))
 
 plot(density(betahatmat[,2]),main="Slope Parameter",lwd=2,col="lightgreen",xlab="values")
 points(q2, c(0, 0), pch = 19, col = "red")
 points(c(LL2,UL2), c(0, 0), pch = 19, col = "darkblue")
-legend("topleft",fill=c("red","darkblue"),legend=c("Quartile","Normal"))
+legend("topleft",fill=c("red","darkblue"),legend=c("Quantile","Normal"))
 
 
 #### Semi-Parametric Approach 
@@ -140,11 +140,11 @@ UL2=Xbar2+1.96*seboot2; round(UL2,4)
 plot(density(betahatmat[,1]),main="Intercept Parameter",lwd=2,col="lightblue",xlab="values")
 points(q1, c(0, 0), pch = 19, col = "red")
 points(c(LL1,UL1), c(0, 0), pch = 19, col = "darkblue")
-legend("topright",fill=c("red","darkblue"),legend=c("Quartile","Normal"))
+legend("topright",fill=c("red","darkblue"),legend=c("Quantile","Normal"))
 
 plot(density(betahatmat[,2]),main="Slope Parameter",lwd=2,col="lightgreen",xlab="values")
 points(q2, c(0, 0), pch = 19, col = "red")
 points(c(LL2,UL2), c(0, 0), pch = 19, col = "darkblue")
-legend("topleft",fill=c("red","darkblue"),legend=c("Quartile","Normal"))
+legend("topleft",fill=c("red","darkblue"),legend=c("Quantile","Normal"))
 
 
