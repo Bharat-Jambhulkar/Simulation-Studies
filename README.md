@@ -12,4 +12,6 @@ The sampling Techniques folder contains methods for generating samples from non-
 
 The Time Series folder contains exercises related to time series analysis. The initial commit includes an exercise demonstrating a step-by-step classical additive decomposition of time series data. As the course progresses, more exercises will be added.  
 
+The Bagging folder contains code related to applying the bagging method to Linear Regression and Linear Discriminant Analysis techniques. It also includes code demonstrating the use of Random Forest with the Linear Regression technique.
+
 The Missing Data Treatment folder contains code for creating missing data from the original dataset. After generating the missing data, various missing value imputation techniques are applied to fill the NA values. Finally, visualization is performed to assess the impact of the missing value imputation.
