@@ -11,3 +11,5 @@ The folder LASSO and Ridge is an exercise aimed at determining how often LASSO c
 The sampling Techniques folder contains methods for generating samples from non-standard functions/distributions. Currently, the Acceptance-Rejection method is included. Importance Sampling and other methods will be added soon. Gibbs sampling method added. 
 
 The Time Series folder contains exercises related to time series analysis. The initial commit includes an exercise demonstrating a step-by-step classical additive decomposition of time series data. As the course progresses, more exercises will be added.  
+
+The Missing Data Treatment folder contains code for creating missing data from the original dataset. After generating the missing data, various missing value imputation techniques are applied to fill the NA values. Finally, visualization is performed to assess the impact of the missing value imputation.
